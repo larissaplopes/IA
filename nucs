@@ -1,0 +1,26 @@
+fstreamout = open("C:\Programa\IA\nucleos.txt", 'w')
+
+nuc = {a,t,c,g}
+
+di = []
+tri = []
+quadra = []
+quinta = []
+
+for i in range(4): # for (i = 0; i < 4; ++i)
+	for j in range(4): # for (j = 0; j < 4; ++j)
+		di.append(nuc[i] + nuc[j])
+		for k in range(4): # for (k = 0; k < 4; ++k)
+			tri.append(nuc[i] + nuc[j] + nuc[k])
+			for l in range(4): # for (l = 0; l < 4; ++l)
+				quadra.append(nuc[i] + nuc[j] + nuc[k] + nuc[l])
+				for m in range(4):
+					quinta.append(nuc[i] + nuc[j] + nuc[k] + nuc[l] + nuc[m])
+
+fstreamout.write(di)
+
+fstreamout.write(tri)
+
+fstreamout.write(quadra)
+
+fstreamout.write(quinta)
